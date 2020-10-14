@@ -1,0 +1,32 @@
+\begin{frame}
+    \frametitle{Objective Losses}
+    \framesubtitle{Spatial Losses}
+    The spatial losses are based on the fact that, given the structure of stereo cameras, for a pixel $p_l(u_l, v_l)$ on the left image and $p_r(u_r, v_r)$ on the left image:
+
+    \[ u_l = u_r \hspace{1em} \text{and} \hspace{1em} v_l = v_r + D_p \] 
+    \begin{itemize}
+        \item Photometric Consistency Loss (Image reconstruction)
+        \[ L_{pho} = \lambda_s L^{SSIM} (I, I') + (1 - \lambda_s)L^{l_1}(I, I') \]
+
+        \item Disparity Consistency Loss (Depth)
+        \[ L_{dis} = L^{l_1}(D_{dis}, D_{dis}') \]
+
+        \item Pose Consistency Loss (Camera orientation)
+        \[ L_{pos} = \lambda_pL^{l_1}(t_l, t_r) + \lambda_oL^{l_1}(R_l, R_r) \]
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Objective Losses}
+    \framesubtitle{Temporal Losses}
+    This is based on the reconstruction of pixels on time $k$ and $(k + 1)$ as
+    \[p_{k + 1} = K T_{k, k+1} D_{dep} K^{-1} p_k \]
+    \begin{itemize}
+        \item Photometric Consistency Loss (Image reconstruction)
+        \[ L_{pho} = \lambda_s L^{SSIM} (I, I') + (1 - \lambda_s)L^{l_1}(I, I') \]
+
+        \item 3D Geometric Registration Loss (Adding depth with $P(x, y, z)$)
+        \[ L_{geo} = L^{l_1} (P, P') \]
+
+    \end{itemize}
+\end{frame}
