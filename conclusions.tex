@@ -1,6 +1,19 @@
 \begin{frame}
     \frametitle{Conclusions}
     \begin{itemize}
-        \item UnDeepVo ...
+        \item Performs inference on monocular images
+        \item Pose and dense estimations for recovering the trajectory
+            \begin{itemize}
+                \item One CNN for depth estimation
+                \item Another CNN for pose estimation
+            \end{itemize}
+        \item Outperforms previous methods in almost all cases
+        \item First unsupervised Visual Odometry model
+        \begin{itemize}
+            \item Trained with unlabeled stereo images
+            \item Uses stereo image pairs to recover the scale
+            \item Scale can not be recovered from monocular images
+        \end{itemize}
+        \item Plans to extend to a SLAM system
     \end{itemize}
 \end{frame}
