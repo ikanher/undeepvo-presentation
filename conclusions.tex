@@ -1,6 +1,14 @@
 \begin{frame}
     \frametitle{Conclusions}
     \begin{itemize}
+        \item First unsupervised Visual Odometry model
+        \begin{itemize}
+            \item Trained with unlabeled stereo images
+            \item Uses stereo image pairs to recover the scale
+            \begin{itemize}
+                \item Scale can not be recovered from monocular images
+            \end{itemize}
+        \end{itemize}
         \item Performs inference on monocular images
         \item Pose and dense estimations for recovering the trajectory
             \begin{itemize}
@@ -8,12 +16,6 @@
                 \item Another CNN for pose estimation
             \end{itemize}
         \item Outperforms previous methods in almost all cases
-        \item First unsupervised Visual Odometry model
-        \begin{itemize}
-            \item Trained with unlabeled stereo images
-            \item Uses stereo image pairs to recover the scale
-            \item Scale can not be recovered from monocular images
-        \end{itemize}
-        \item Plans to extend to a SLAM system
+        \item Plans to extend to a full SLAM system
     \end{itemize}
 \end{frame}
