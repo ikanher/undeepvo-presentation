@@ -1,15 +1,40 @@
 \begin{frame}
     \frametitle{Evaluation}
     \framesubtitle{Trajectory}
-    \begin{itemize}
-        \item ...
-    \end{itemize}
+	       \begin{columns}
+	       	\begin{column}{0.48\textwidth}
+	       		\begin{itemize}
+	       			\item KITTI Odometry Dataset 
+	       			\item Comparison between UnDeepVO, SfMLearner VISO2-M and ORB-SLAM-M
+	       			\item UnDeepVO qualitatively closest to the ground truth for all sequences
+	       		\end{itemize}
+	       	\end{column}
+	       	\begin{column}{0.48\textwidth}
+	       	\vspace{-.5cm}
+	    	\includegraphics[width=\linewidth]{images/trajectory-eval.png}
+	       	\end{column}
+	       \end{columns} 
+
 \end{frame}
 
 \begin{frame}
     \frametitle{Evaluation}
     \framesubtitle{Depth}
-    \begin{itemize}
-        \item ...
-    \end{itemize}
-\end{frame}
+	       \begin{columns}
+	       	\begin{column}{0.45\textwidth}
+	       		\begin{itemize}
+	       			\item UnDeepVO also produces a scaled depth map 
+	       			\item Depth of objects estimated accurately
+	       			\item Model outperforms some competitors but not all
+	       			\begin{itemize}
+	       				\item Only part of KITTI dataset used
+	       				\item Lower image resolution
+	       				\item Temporal image sequence loss might have introduced noise
+	       			\end{itemize}
+	       				       			
+	       		\end{itemize}
+	       	\end{column}
+	       	\begin{column}{0.53\textwidth}
+	       		\includegraphics[width=\linewidth]{images/depth_estimation.png}
+	       	\end{column}
+	       \end{columns} \end{frame}
